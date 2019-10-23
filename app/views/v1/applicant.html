@@ -1,7 +1,15 @@
 {% extends "layout-staff.html" %}
 
 {% block pageTitle %}
-  Disability Confidence
+  {% include "v1/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v1/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v1/_key-details.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,9 +36,9 @@
     </div>
     {% endif %}
 
-    {% include "iteration-1/_applicant-QQ123456C.html" %}
+    {% include "v1/_applicant-details.html" %}
 
-    <p style="margin-top: -30px; margin-bottom: 80px;"><a href="/public/pdf/application.pdf" target="_blank">Fred Flintstone application form (opens a new tab)</a></p>
+    <p style="margin-top: -30px; margin-bottom: 80px;"><a href="#" target="_blank">'XXXX' application form (opens a new tab)</a></p>
 
   </div>{# /govuk-grid-column-two-thirds #}
 

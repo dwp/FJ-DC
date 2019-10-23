@@ -1,0 +1,19 @@
+<section class="dwp-key-details-bar dwp-print-hide" role="contentinfo" aria-label="Key details">
+  <dl class="dwp-key-details-bar__contents govuk-width-container">
+    <div class="dwp-key-details-bar__header">
+
+      {% include "v1/_applicant-details-head.html" %}
+
+      <dt class="govuk-visually-hidden">Status:</dt>
+      <dd class="dwp-key-details-bar__status">
+        {% if getData.status === "verified" %}
+          Verified
+        {% elif getData.status === "failedtoattend" %}
+          Failed to attend
+        {% else %}
+          Unverified
+        {% endif %}
+      </dd>
+    </div>
+  </dl>
+</section>

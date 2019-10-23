@@ -1,8 +1,18 @@
+
 {% extends "layout-staff.html" %}
 
 {% block pageTitle %}
-    Disibility Confidence
+  {% include "v1/_service-name.html" %}
 {% endblock %}
+
+{% block serviceName %}
+  {% include "v1/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v1/_key-details.html" %}
+{% endblock %}
+
 
 {% block beforeContent %}
   <div class="govuk-!-margin-bottom-5">
