@@ -1,0 +1,27 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-one-half">
+
+    <h1 class="govuk-heading-l">Claimant not found</h1>
+    <p class="govuk-body-l">There are no applications from anyone with National Insurance number: <span class="govuk-!-font-weight-bold">{{getData.nino}}</span>.</p>
+    <a href="search" role="button" draggable="false" class="govuk-button">
+    Back to search
+    </a>
+
+  </div>{# /govuk-grid-column-one-half #}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

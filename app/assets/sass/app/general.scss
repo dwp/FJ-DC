@@ -1,0 +1,341 @@
+* {
+ font-family: "GDS Transport", Arial, sans-serif;
+}
+
+.govuk-summary-list__key {
+  width: 50%;
+}
+
+a:visited {
+  color: govuk-colour("blue");
+}
+
+// /////////////////////////////////
+// Search button
+// /////////////////////////////////
+
+.govuk-button.search {
+  background-image: url("/public/images/search.svg");
+  background-repeat: no-repeat;
+  background-position: center 8px;
+  width: 44px;
+  text-indent: -9999em;
+  position: relative;
+  left: -3px;
+  height: 38px;
+  &:focus {
+    background-position: center -192px;
+  }
+  &:focus:active {
+    background-position: center 8px;
+  }
+}
+
+/////////////////////////////////
+// Tabs
+/////////////////////////////////
+
+.govuk-tabs__tab--selected {
+  font-weight: bold;
+}
+
+/////////////////////////////////
+// Tables
+/////////////////////////////////
+
+ thead th {
+  padding: 0;
+ }
+
+ table {
+  margin-bottom: 0 !important;
+ }
+
+table {
+  th, td {
+    // @include copy-16;
+    padding: 7px;
+    vertical-align: top;
+
+  }
+  td {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  th {
+    font-weight: bold;
+  }
+  tbody tr {
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  .table-link {
+    text-decoration: underline;
+  }
+  .highlight {
+    margin-left: 10px;
+    @extend %govuk-body-s;
+  }
+}
+
+// Sortable table styles
+
+th.right,
+td.right {
+  text-align: right;
+  padding-right: 2%;
+}
+
+th.right.padding-right {
+  padding-right: 25px;
+}
+
+tr.table-header-sortable th {
+  cursor: pointer;
+  padding-right: 0;
+  &:hover {
+    text-decoration: underline;
+  }
+  span {
+    padding-right: 14px;
+    background-repeat: no-repeat;
+    background-position: right 6px;
+  }
+}
+
+.sorting_asc span {
+  background-image: url(/public/images/icons/arrow-small-up-blue.svg);
+}
+
+.sorting_desc span {
+  background-image: url(/public/images/icons/arrow-small-down-blue.svg);
+  background-position: right 7px;
+}
+
+// Fixed header table styles
+
+.fixedHeader-floating {
+  position: fixed;
+  background-color: govuk-colour("white");
+} 
+
+.fixedHeader-floating th {
+  // border-bottom: 2px solid govuk-colour("grey-2");
+}
+
+// Horizontal scrollable tables
+
+.table-scrollable-wrapper {
+  position: relative;
+  clear: both;
+  .table-scrollable {
+    min-width: 550px;
+    overflow: auto;
+  }
+}
+
+// /////////////////////////////////
+// // FILTERS
+// /////////////////////////////////
+
+.filters {
+  clear: both;
+  margin-bottom: 20px;
+  width: 60%;
+  float: left;
+  font-size: 19px;
+  line-height: 25px;
+  padding-top: 20px;
+
+  h3 {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: normal;
+  }
+  ul {
+    display: inline-block;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+.dataTables_filter {
+  position: absolute;
+  right: 0;
+  width: 200px;
+  float: right;
+  top: -72px;
+  z-index: 9999;
+  label {
+    position: relative;
+    display: block;
+    input {
+      position: absolute;
+      right: 0;
+      font-size: 16px;
+      padding: 5px;
+      width: 300px;
+      border: 2px solid govuk-colour("black");
+      padding: 6px 5px 4px 5px;
+      font-size: 19px;
+      line-height: 25px;
+    }
+  }
+}
+
+// /////////////////////////////////
+// Q+A
+// /////////////////////////////////
+
+dl.qa {
+  @include govuk-font(19);
+  dt {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  dd {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+
+// /////////////////////////////////
+// SCENARIO LIST
+// /////////////////////////////////
+
+.scenario-list {
+  h4 {
+    margin-bottom: 5px !important;
+  }
+  p {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+  }
+  .govuk-inset-text {
+    margin-top: 15px !important;
+    margin-bottom: 20px !important;
+    background-color: govuk-colour("light-grey");
+  }
+  hr {
+    display: none !important;
+  }
+  li {
+    margin-bottom: 40px;
+  }
+  li li {
+    margin-bottom: 0px;
+  }
+}
+
+/* ==========================================================================
+   #SECONDARY NAV
+   ========================================================================== */
+
+.moj-sub-navigation {
+  margin-bottom: govuk-spacing(7);
+}
+
+
+.moj-sub-navigation__list {
+  font-size: 0; // Removes white space when using inline-block on child element.
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include govuk-media-query($from: tablet) {
+    box-shadow: inset 0 -1px 0 $govuk-border-colour;
+    width: 100%;
+  }
+
+  // IE8 does not support box shadow, so use a standard border.
+  @include govuk-if-ie8 {
+    border-bottom: 1px solid $govuk-border-colour;
+  }
+
+}
+
+
+.moj-sub-navigation__item {
+  @include govuk-font(19);
+  box-shadow: inset 0 -1px 0 $govuk-border-colour;
+  display: block;
+  margin-top: -1px;
+
+  &:last-child {
+    box-shadow: none;
+  }
+
+  @include govuk-media-query($from: tablet) {
+    box-shadow: none;
+    display: inline-block;
+    margin-right: govuk-spacing(4);
+    margin-top: 0;
+  }
+
+}
+
+
+.moj-sub-navigation__link {
+  display: block;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: govuk-spacing(3);
+  text-decoration: none;
+  position: relative;
+
+  @include govuk-media-query($from: tablet) {
+    padding-left: 0;
+  }
+
+  &:focus {
+    color: govuk-colour("black"); // Focus colour on yellow should really be black.
+    position: relative; // Ensure focus sits above everything else.
+    box-shadow: none;
+  }
+
+  &:focus:before {
+    background-color: govuk-colour("black");
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 5px;
+  }
+
+}
+
+
+.moj-sub-navigation__link[aria-current="page"] {
+  color: govuk-colour("black");
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:before {
+    background-color: govuk-colour("blue");
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute; bottom: 0; left: 0;
+    width: 5px;
+
+    @include govuk-media-query($from: tablet) {
+      height: 5px;
+      width: 100%;
+    }
+
+  }
+
+  &:focus:before {
+    background-color: govuk-colour("black");
+  }
+
+}

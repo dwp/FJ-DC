@@ -1,0 +1,149 @@
+/* ==========================================================================
+   #KEY DETAILS BAR
+   ========================================================================== */
+
+$white-transparent: rgba($govuk-body-background-colour, 0.3);
+$key-details-bar-break-point: 940px;
+$key-details-bar-break-point-md: 840px;
+$key-details-bar-break-point-sm: 640px;
+
+.dwp-key-details-bar {
+  background-color: govuk-colour("blue");
+
+  .dwp-key-details-bar__contents {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    * {
+      color: govuk-colour("white");
+    }
+
+    .dwp-key-details-bar__header,
+    .dwp-key-details-bar__body {
+      &::after {
+        clear: both;
+        content: ' ';
+        display: block;
+      }
+    }
+
+    .dwp-key-details-bar__body {
+      border-top: 1px solid $white-transparent;
+      content: ' ';
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+
+    dd,
+    dt {
+      float: left;
+      font-size: 16px;
+      margin: 0 5px 0 0;
+      padding: 0;
+      @include govuk-media-query($from: tablet) {
+        font-size: 19px;
+      }
+    }
+
+    dd {
+      margin-right: 20px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      @include govuk-media-query($from: tablet) {
+        font-size: 19px;
+        margin-bottom: 0;
+      }
+    }
+
+    .dwp-key-details-bar__name, 
+    .dwp-key-details-bar__action,
+    .dwp-key-details-bar__body dt {
+      clear: left;
+      font-weight: 700;
+      @include govuk-media-query($from: desktop) {
+        clear: none;
+      }
+    }
+
+    .dwp-key-details-bar__name {
+      line-height: 1.11111;
+      margin-right: 10px;
+      font-size: 24px;
+      line-height: 1.04167;
+      float: left;
+      margin: 0 5px 0 0;
+      @include govuk-media-query($from: tablet) {
+        font-size: 36px;
+      }
+    }
+
+    .dwp-key-details-bar__nino {
+      font-size: 18px;
+      line-height: 1;
+      margin-top: 6px;
+      @include govuk-media-query($from: tablet) {
+        font-size: 24px;
+        margin-top: 11px;
+      }
+    }
+
+    // LEGACY - MOVE to use TAG instead in the app when ready
+    .dwp-key-details-bar__status {
+      float: left;
+      clear: left;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 4px 8px 2px;
+      margin: 10px 0 0 0;
+      color: govuk-colour('blue');
+      background-color: govuk-colour('white');
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      @include govuk-media-query($from: desktop) {
+        margin-top: 5px;
+        float: right;
+        clear: none;
+      }
+    }
+
+    .tag {
+      float: right;
+      margin: 5px 0 0;
+      color: govuk-colour("blue");
+
+      @media(max-width: $key-details-bar-break-point) {
+        font-size: 14px;
+        float: left;
+        clear: both;
+        margin-top: 5px;
+      }
+    }
+
+    .dwp-key-details-bar__action,
+    .dwp-key-details-bar__toggle {
+      font-size: 16px;
+      line-height: 1.25;
+      padding: 5px 8px 0;
+      letter-spacing: 1px;
+      text-decoration: none;
+      float: right;
+      margin: 5px 0 0;
+      
+      @media(max-width: $key-details-bar-break-point) {
+        font-size: 14px;
+        float: left;
+        clear: both;
+        margin-top: 5px;
+        padding-left: 0;
+      }
+    }
+
+    .dwp-key-details-bar__toggle {
+      margin-top: -2px;
+      text-decoration: underline;
+    }
+  }
+}

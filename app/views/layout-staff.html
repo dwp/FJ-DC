@@ -1,0 +1,109 @@
+{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+{%- set assetPath = '/govuk/assets' -%}
+{# {% extends "govuk/template.njk" %} #}
+{% from "govuk/components/accordion/macro.njk"        import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk"        import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk"      import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk"           import govukButton %}
+{% from "govuk/components/character-count/macro.njk"  import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk"       import govukCheckboxes %}
+{% from "govuk/components/date-input/macro.njk"       import govukDateInput %}
+{% from "govuk/components/details/macro.njk"          import govukDetails %}
+{% from "govuk/components/error-message/macro.njk"    import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk"    import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk"         import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk"      import govukFileUpload %}
+{% from "govuk/components/input/macro.njk"            import govukInput %}
+{% from "govuk/components/inset-text/macro.njk"       import govukInsetText %}
+{% from "govuk/components/panel/macro.njk"            import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk"     import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk"           import govukRadios %}
+{% from "govuk/components/select/macro.njk"           import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk"        import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk"     import govukSummaryList %}
+{% from "govuk/components/table/macro.njk"            import govukTable %}
+{% from "govuk/components/tabs/macro.njk"             import govukTabs %}
+{% from "govuk/components/tag/macro.njk"              import govukTag %}
+{% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
+
+<!DOCTYPE html>
+<html lang="{{ htmlLang | default('en') }}" class="govuk-template {{ htmlClasses }}">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block pageTitle %}GOV.UK - The best place to find government services and information{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{ themeColor | default('#0b0c0c') }}" /> {# Hardcoded value of $govuk-black #}
+
+    {% block headIcons %}
+      <link rel="shortcut icon" href="{{ assetPath | default('/assets') }}/images/favicon.ico" type="image/x-icon" />
+      <link rel="mask-icon" href="{{ assetPath | default('/assets') }}/images/govuk-mask-icon.svg" color="{{ themeColor | default('#0b0c0c') }}"> {# Hardcoded value of $govuk-black #}
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ assetPath | default('/assets') }}/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="{{ assetPath | default('/assets') }}/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="{{ assetPath | default('/assets') }}/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="{{ assetPath | default('/assets') }}/images/govuk-apple-touch-icon.png">
+    {% endblock %}
+
+    {% block head %}
+        <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    {% endblock %}
+    {# The default og:image is added below head so that scrapers see any custom metatags first, and this is just a fallback #}
+    {# image url needs to be absolute e.g. http://wwww.domain.com/.../govuk-opengraph-image.png #}
+    <meta property="og:image" content="{{ assetUrl | default('/assets') }}/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body {{ bodyClasses }}">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    {% block bodyStart %}{% endblock %}
+
+    {% block skipLink %}
+      {{ govukSkipLink({
+        href: '#main-content',
+        text: 'Skip to main content'
+      }) }}
+    {% endblock %}
+
+    {% block header %}
+      <header class="dwp-header " role="banner" data-module="dwp-header">
+        <div class="dwp-header__container govuk-width-container">
+          <div class="dwp-header__contents">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <a href="/" class="dwp-header__link dwp-header__link--service-name">
+                  {% block serviceName %}Service name here{% endblock %}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    {% endblock %}
+
+    {% block keyDetails %}
+    {% endblock %}
+
+    <div class="govuk-width-container">
+      {% block main %}
+        {% block beforeContent %}{% endblock %}
+{#         <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"> #}
+          <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+          {% block content %}{% endblock %}
+        </main>
+      {% endblock %}
+    </div>
+
+    {% block footer %}
+{#       {{ govukFooter({}) }} #}
+    {% endblock %}
+
+    {% block bodyEnd %}
+      <!-- Javascript -->
+      <script src="/public/javascripts/jquery-1.11.3.js"></script>
+      <script src="/public/javascripts/datatables.min.js"></script>
+      <script src="/extension-assets/govuk-frontend/govuk/all.js"></script>
+      <script src="/public/javascripts/application.js"></script>
+      <script src="/public/javascripts/auto-store-data.js"></script>
+      <script src="/public/javascripts/moment.js"></script>
+    {% endblock %}
+  </body>
+</html>

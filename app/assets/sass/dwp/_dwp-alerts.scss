@@ -1,0 +1,29 @@
+.alert-default {
+  border-color: govuk-colour("blue");
+  background-color: mix(white, #2b8cc4, 90%);
+}
+
+.alert-orange {
+  border-color: govuk-colour("orange");
+  background-color: mix(white, #F47738, 78%);
+}
+
+.alert-yellow {
+  border-color: govuk-colour("yellow");
+  background-color: mix(white, #ffbf47, 90%);
+}
+
+.alert-warning {
+  border-color: govuk-colour("red");
+  background-color: mix(white, #b10e1e, 90%);
+}
+
+.alert-success {
+  border-color: govuk-colour("green");
+  background-color: mix(white, #006435, 90%);
+}
+
+.notice.long .icon {
+  margin-top: 0;
+  top: 0px;
+}

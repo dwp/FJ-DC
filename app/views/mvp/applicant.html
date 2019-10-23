@@ -1,0 +1,57 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "mvp/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "mvp/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "mvp/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    {% if getData.sr %}
+    <div class="orange-border">
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Special rules
+        </strong>
+      </div>
+    </div>
+    {% endif %}
+
+    {% include "iteration-1/_applicant-QQ123456C.html" %}
+
+    <p style="margin-top: -30px; margin-bottom: 80px;"><a href="/public/pdf/application.pdf" target="_blank">Fred Flintstone application form (opens a new tab)</a></p>
+
+  </div>{# /govuk-grid-column-two-thirds #}
+
+  {% if getData.status === "verified" %}
+  {% else %}
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items status-verified" role="complementary">
+        <h3 class="govuk-heading-m" id="claim-actions-title">Claim actions</h3>
+        <a href="status?nino={{getData.nino}}&amp;status={{getData.status}}" class="govuk-button">Update claim status</a>
+      </aside>
+    </div>{# /govuk-grid-column-one-third #}
+  {% endif %}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

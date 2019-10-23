@@ -1,0 +1,46 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#search">Enter a National Insurance number in the correct format</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h1 class="govuk-heading-l">Find an application</h1>
+    <form action="nino-search" method="post">
+      <div class="govuk-form-group govuk-form-group--error">
+        <label class="govuk-label" for="search">
+          Enter the claimant’s National Insurance number
+        </label>
+        <span id="national-insurance-number-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Enter a National Insurance number in the correct format
+        </span>
+        <input class="govuk-input govuk-input--width-20" id="search" name="search" type="text" value="efwiofew">
+      </div>
+      <a href="applicant" class="govuk-button">Find claim</a>
+    </form>
+
+  </div>{# /govuk-grid-column-two-thirds #}
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

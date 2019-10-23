@@ -1,0 +1,33 @@
+#global-header {
+  .header-proposition {
+    #proposition-name.govuk-header__link--service-name {
+      font-size: 26px;
+      // @include media(desktop) {
+      //   font-size: 30px;
+      // }
+    }
+  }
+}
+
+.dwp-header {
+  background-color: govuk-colour("black");
+  margin: 0;
+  a {
+    color: govuk-colour("white");
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+    &:active,
+    &:focus {
+      color: govuk-colour("black");
+    }
+    @extend %govuk-heading-m;
+    padding: 13px 0 12px 0;
+    margin-bottom: 0;
+    @include govuk-media-query($from: tablet) {
+      padding: 10px 0 14px 0;
+    }
+  }
+}

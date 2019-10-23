@@ -1,0 +1,58 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "mvp/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "mvp/_service-name.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back to search</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">Search results for MM001122A</h1>
+
+    <table class="govuk-table">
+      <caption class="govuk-visually-hidden">Search results</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Name</th>
+          <th class="govuk-table__header" scope="col">Status</th>
+          <th class="govuk-table__header" scope="col">Special rules</th>
+          <th class="govuk-table__header" scope="col">Application submitted</th>
+          <th class="govuk-table__header" scope="col"><span class="govuk-visually-hidden">Actions</span></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Minnie Mouse</td>
+          <td class="govuk-table__cell"><span class="app-c-tag">Unverified</span></td>
+          <td class="govuk-table__cell">No</td>
+          <td class="govuk-table__cell">31 March 2019, 9:05am</td>
+          <td class="govuk-table__cell"><a href="#">View claim</a></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">Minnie Mouse</td>
+          <td class="govuk-table__cell"><span class="app-c-tag">Unverified</span></td>
+          <td class="govuk-table__cell">No</td>
+          <td class="govuk-table__cell">30 March 2019, 10:43pm</td>
+          <td class="govuk-table__cell"><a href="#">View claim</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>{# /govuk-grid-column-full #}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

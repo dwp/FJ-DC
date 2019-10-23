@@ -1,0 +1,45 @@
+{% extends "layout_master.html" %}
+
+{% block pageTitle %}
+  MVP &ndash; Reference screens &ndash; {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-!-margin-bottom-5">
+    <a href="/dev-index" rel="prev" class="govuk-back-link">Back to reference screens for JIRA stories</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Agent user interface (MVP)</h1>
+
+    <h2 class="govuk-heading-m">Search</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="search?nino=QQ123456C">Search</a></li>
+      <li><a href="search-not-found?nino=QQ123456C">Search no results found</a></li>
+      <li><a href="search-validation">Search validation message</a></li>
+      <li><a href="search-multiple-results">Multiple results found</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-m">Claims</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="applicant?nino=QQ123456C&status=unverified">Claimant summary (unverified)</a></li>
+      <li><a href="applicant?nino=QQ123456C&status=unverified&sr=true">Claimant summary with ‘special rules’ (unverified)</a></li>
+      <li><a href="applicant?nino=QQ123456C&status=verified">Claimant summary (verified)</a></li>
+      <li><a href="status?nino=QQ123456C&status=unverified">Change status</a></li>
+      <li><a href="status-validation?nino=QQ123456C&status=unverified">Change status validation</a></li>
+{#       <li><a href="pdf?nino=QQ123456C&status=unverified">Before you can verify</a></li>
+      <li><a href="pdf-validation?nino=QQ123456C&status=unverified">Before you can verify validation</a></li> #}
+      <li><a href="status-confirmation?status=verified&nino=QQ123456C">Confirmation (claim verified)</a></li>
+    </ul>
+    
+  </div>{# /govuk-grid-column-two-thirds #}
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

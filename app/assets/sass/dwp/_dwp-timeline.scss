@@ -1,0 +1,39 @@
+.dwp-timeline {
+  border-left: 3px solid govuk-colour("blue");
+}
+
+.dwp-timeline__entry {
+  margin: 2em 0;
+  padding-left: 1em;
+  position: relative;
+
+  &::before {
+    background-color: govuk-colour("blue");
+    content: ' ';
+    height: 3px;
+    left: 0;
+    position: absolute;
+    top: .5em;
+    width: 10px;
+  }
+
+  .dwp-timeline__info {
+    margin-top: 0;
+  }
+
+  .dwp-timeline__body {
+    display: block;
+  }
+}
+
+.dwp-timeline__title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.dwp-timeline__author,
+.dwp-timeline__date {
+  color: $govuk-secondary-text-colour;
+  display: block;
+}

@@ -1,0 +1,37 @@
+{% extends "layout_master.html" %}
+
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-!-margin-bottom-8"></div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-margin-top-8">
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-half">
+      <a href="proto-index" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">Prototypes for testing in user research</h2>
+        </div>
+      </a>
+    </div>
+    
+    <div class="govuk-grid-column-one-half">
+      <a href="dev-index" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">Reference screens for JIRA stories</h2>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <img src="/public/images/mario.png" width="150px" style="margin-top: 30px; margin-bottom: -10px; float: right" alt="Team Mario">
+  <div style="clear:both"></div>
+</div>
+
+{% endblock %}

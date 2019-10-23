@@ -1,0 +1,63 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "mvp/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "mvp/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "mvp/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="status-changing" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Update the status of this claim
+            </h1>
+          </legend>
+          <input id="nino" name="nino" type="hidden" value="{{getData.nino}}">
+
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
+              <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="verified">
+                Verified
+              </label>
+              <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
+            </div>
+          </div>{# /govuk-checkboxes #}
+
+        </fieldset>
+      </div>{# /govuk-form-group #}
+
+      <p><a href="status-confirmation?status=verified&amp;nino={{getData.nino}}" class="govuk-button">Continue</a></p>
+
+{#       <button type="submit" class="govuk-button">Continue</button> #}
+
+    </form>
+
+  </div>{# /govuk-grid-column-two-thirds #}
+
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}

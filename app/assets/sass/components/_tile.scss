@@ -1,0 +1,52 @@
+.tile {
+  @extend .govuk-body-m;
+  display: block;
+  position: relative;
+  text-align: center;
+  min-height: 18ex;
+  line-height: 18ex;
+  vertical-align: middle;
+
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::before {
+    content: '';
+    position: relative;
+    width: 0;
+    height: 100%;
+  }
+
+  &::before,
+  .tile__contents {
+    display: inline-block;
+    max-width: 90%;
+    vertical-align: middle;
+  }
+
+  .tile__text {
+    margin-bottom: 0;
+  }
+
+  .tile__title {
+    @extend .govuk-heading-s;
+    margin: 0;
+  }
+}
+
+.tile--grey {
+  background: govuk-colour('light-grey');
+  border: 2px solid govuk-colour('mid-grey');
+
+  .tile__title,
+  .tile__text {
+    color: govuk-colour('blue');
+  }
+
+  &:hover {
+    background: #DAD9D8;
+    border-color: #9EA1A3;
+  }
+}
