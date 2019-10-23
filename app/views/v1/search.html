@@ -19,7 +19,7 @@
     <form action="/v2/search-entry" method="post">
       <div class="govuk-form-group">
         <label class="govuk-label" for="search">
-          Enter the company name or a reference number
+          Enter the company name or reference number
         </label>
         <input class="govuk-input govuk-input--width-20" id="search" name="search" type="text" autocomplete="off" value="{% if getData.nino %}{{getData.nino}}{% endif %}">
       </div>
