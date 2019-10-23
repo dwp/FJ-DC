@@ -8,8 +8,10 @@
       <dd class="dwp-key-details-bar__status">
         {% if getData.status === "verified" %}
           Accepted
+        {% elseif getData.status === "action" %}
+          Action needed
         {% elseif getData.status === "rejected" %}
-          Renewal action
+          Rejected          
         {% else %}
           Pending
         {% endif %}
