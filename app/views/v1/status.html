@@ -36,11 +36,25 @@
           </legend>
           <input id="nino" name="nino" type="hidden" value="{{getData.nino}}">
 
-          <div class="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
-              <label class="govuk-label govuk-checkboxes__label govuk-label--s" for="verified">
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
                 Verified
+              </label>
+              <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
+                Pending
+              </label>
+              <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
+                Unverified
               </label>
               <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
             </div>
