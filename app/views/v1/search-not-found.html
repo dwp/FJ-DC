@@ -15,14 +15,28 @@
 
   <div class="govuk-grid-column-one-half">
 
-    <h1 class="govuk-heading-l">Claimant not found</h1>
-    <p class="govuk-body-l">There are no applications from anyone with National Insurance number: <span class="govuk-!-font-weight-bold">{{getData.nino}}</span>.</p>
-    <a href="search" role="button" draggable="false" class="govuk-button">
-    Back to search
-    </a>
+    <h1 class="govuk-heading-l">Employer not found</h1>
 
-  </div>{# /govuk-grid-column-one-half #}
+    <p class="govuk-body-l">No records found for: <span class="govuk-!-font-weight-bold">XXXXXXX</span>.</p>
 
-</div>{# /govuk-grid-row #}
+    <h2 class="govuk-heading-m">Search again</h1>
+
+    <form action="/v2/search-entry" method="post">
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="search">
+          Enter the company name or reference number
+        </label>
+        <input class="govuk-input govuk-input--width-20" id="search" name="search" type="text" autocomplete="off" value="{% if getData.nino %}{{getData.nino}}{% endif %}">
+      </div>
+
+      <a class="govuk-button" href="/v1/applicant">Find company</a>
+
+      <p><a href="#">Download all employer data as a CSV</a></p>
+
+    </form>
+
+  </div>
+
+</div>
 
 {% endblock %}
