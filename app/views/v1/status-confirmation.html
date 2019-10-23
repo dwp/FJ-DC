@@ -16,25 +16,25 @@
 
 <div class="govuk-grid-row">
 
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
-    {% if getData.status === "verified" %}
       <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
-        <h1 class="govuk-panel__title">Claim verified</h1>
-        <div class="govuk-panel__body">Their claim is now ready for processing.</div>
+        <h1 class="govuk-panel__title">Employer registration confirmed</h1>
+        <div class="govuk-panel__body">Now send them their Disability Confident information.</div>
       </div>
-      <a href="search?unverified=true" role="button" draggable="false" class="govuk-button">Find another claim</a>
-    {% elif getData.status === "failedtoattend" %}
-      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-2 govuk-!-margin-bottom-6">
-        <h1 class="govuk-panel__title">Failed to attend</h1>
-        <div class="govuk-panel__body">Their claim will be marked as ‘failed to attend’ for&nbsp;30&nbsp;days.</div>
-      </div>
-      <p>If a new appointment is made, the jobcentre will contact you and let you know what to do.</p>
-      <a href="search" role="button" draggable="false" class="govuk-button">Find another claim</a>
-    {% endif %}
 
-  </div>{# /govuk-grid-column-full #}
+      <h2 class="govuk-heading-m">What to do next</h2>
 
-</div>{# /govuk-grid-row #}
+        <ol class="govuk-list govuk-list--number">
+          <li><a href="">Download their certificate</a></li>
+          <li><a href="">Prepare a welcome email and attach the certificate</a></li>
+        </ol>      
+
+      <a class="govuk-button" href="/v1/applicant">Finish</a>
+
+
+  </div>
+
+</div>
 
 {% endblock %}

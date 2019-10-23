@@ -26,16 +26,15 @@
 
     {% include "v1/_applicant-details.html" %}
 
-    <p style="margin-top: -30px; margin-bottom: 80px;"><a href="#" target="_blank">'XXXX' application form (opens a new tab)</a></p>
-
   </div>{# /govuk-grid-column-two-thirds #}
 
   {% if getData.status === "verified" %}
   {% else %}
     <div class="govuk-grid-column-one-third">
       <aside class="app-related-items status-verified" role="complementary">
-        <h3 class="govuk-heading-m" id="claim-actions-title">Claim actions</h3>
-        <a href="status?nino={{getData.nino}}&amp;status={{getData.status}}" class="govuk-button">Update claim status</a>
+        <h3 class="govuk-heading-m" id="claim-actions-title">Case actions</h3>
+        <a href="/v1/status" class="govuk-button">Confirm employer status</a>
+        <br>
       </aside>
     </div>{# /govuk-grid-column-one-third #}
   {% endif %}

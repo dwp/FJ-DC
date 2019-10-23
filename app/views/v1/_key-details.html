@@ -7,11 +7,11 @@
       <dt class="govuk-visually-hidden">Status:</dt>
       <dd class="dwp-key-details-bar__status">
         {% if getData.status === "verified" %}
-          Verified
-        {% elif getData.status === "pending" %}
-          Pending
+          Accepted
+        {% elseif getData.status === "rejected" %}
+          Renewal action
         {% else %}
-          Unverified
+          Pending
         {% endif %}
       </dd>
     </div>

@@ -31,7 +31,7 @@
 
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Update the status of this claim
+              Confirm employer status
             </h1>
           </legend>
           <input id="nino" name="nino" type="hidden" value="{{getData.nino}}">
@@ -40,30 +40,30 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
               <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
-                Verified
+                Accepted
               </label>
-              <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
+              <span id="hint-verified" class="govuk-hint govuk-radios__hint">An agent has confirmed the employer is accepted under the terms of the scheme.</span>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
               <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
                 Pending
               </label>
-              <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
+              <span id="hint-verified" class="govuk-hint govuk-radios__hint">If no action is currently being taken.</span>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
               <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
-                Unverified
+                Renewal action
               </label>
-              <span id="hint-verified" class="govuk-hint govuk-radios__hint">The work coach has told us the claimant has proved their identity and signed their claimant commitment.</span>
+              <span id="hint-verified" class="govuk-hint govuk-radios__hint">An agent needs to communicate with the employer about the renewal of their status.</span>
             </div>
           </div>{# /govuk-checkboxes #}
 
         </fieldset>
       </div>{# /govuk-form-group #}
 
-      <p><a href="#" class="govuk-button">Continue</a></p>
+      <p><a href="/v1/applicant" class="govuk-button">Continue</a></p>
 
 {#       <button type="submit" class="govuk-button">Continue</button> #}
 
