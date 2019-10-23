@@ -34,29 +34,28 @@
               Confirm employer status
             </h1>
           </legend>
-          <input id="nino" name="nino" type="hidden" value="{{getData.nino}}">
 
           <div class="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
+              <input class="govuk-radios__input" id="accepted" name="status" type="radio" value="accepted" aria-describedby="hint-accepted">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="accepted">
                 Accepted
               </label>
-              <span id="hint-verified" class="govuk-hint govuk-radios__hint">An agent has confirmed the employer is accepted under the terms of the scheme.</span>
+              <span id="hint-accepted" class="govuk-hint govuk-radios__hint">An agent has confirmed the employer is accepted under the terms of the scheme.</span>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
-                Pending
+              <input class="govuk-radios__input" id="action" name="status" type="radio" value="action" aria-describedby="hint-action">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="action">
+                Action needed
               </label>
-              <span id="hint-verified" class="govuk-hint govuk-radios__hint">If no action is currently being taken.</span>
+              <span id="hint-action" class="govuk-hint govuk-radios__hint">An agent needs to communicate with the employer about their status.</span>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="verified" name="status" type="radio" value="verified" aria-describedby="hint-verified">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="verified">
-                Renewal action
+              <input class="govuk-radios__input" id="rejected" name="status" type="radio" value="rejected" aria-describedby="hint-rejected">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="rejected">
+                Rejected
               </label>
-              <span id="hint-verified" class="govuk-hint govuk-radios__hint">An agent needs to communicate with the employer about the renewal of their status.</span>
+              <span id="hint-rejected" class="govuk-hint govuk-radios__hint">An agent has confirmed the employer cannot be accepted under the terms of the scheme.</span>
             </div>
           </div>{# /govuk-checkboxes #}
 
