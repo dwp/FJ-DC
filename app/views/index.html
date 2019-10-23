@@ -1,37 +1,23 @@
-{% extends "layout_master.html" %}
+
+{% extends "layout.html" %}
 
 {% block pageTitle %}
-  {{ serviceName }}
-{% endblock %}
-
-{% block beforeContent %}
-  <div class="govuk-!-margin-bottom-8"></div>
+  Budgeting Loan Application
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-!-margin-top-8">
   <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Disibility confidence prototype
+          </h1>
+          <p>This is for testing only, do not use it if you want something real to happen.</p>
 
-    <div class="govuk-grid-column-one-half">
-      <a href="proto-index" class="tile tile--grey">
-        <div class="tile__contents">
-          <h2 class="tile__title">Prototypes for testing in user research</h2>
-        </div>
-      </a>
+          <h2 class="govuk-heading-m"><a href="/v1/index">version 1</a></h2>
+          <p>some content in here of what we've actually done</p>
+          <p><a class="govuk-button" href="/v1/index">Start</a></p>
     </div>
-    
-    <div class="govuk-grid-column-one-half">
-      <a href="dev-index" class="tile tile--grey">
-        <div class="tile__contents">
-          <h2 class="tile__title">Reference screens for JIRA stories</h2>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <img src="/public/images/mario.png" width="150px" style="margin-top: 30px; margin-bottom: -10px; float: right" alt="Team Mario">
-  <div style="clear:both"></div>
 </div>
 
 {% endblock %}
