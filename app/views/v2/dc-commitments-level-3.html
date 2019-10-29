@@ -24,76 +24,84 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/v2/applicant" method="post" class="form">
+      <h1 class="govuk-heading-l">Level 3: confirmation of their self-assessment</h1>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="commitments-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
-                Level 3 commitments made
-              </h1>
-            </legend>
-            <span id="commitments-hint" class="govuk-hint">
-              Select all that apply.
-            </span>
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-4" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-4">
-                  Apprenticeships
+      <form class="form" action="/v2/applicant" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Validating organisation name
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Contact name at validating organisation
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Validator email
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Validator phone number
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="validation-date-hint">
+          <label class="govuk-label" for="validation-date">
+              Date of validation
+          </label>
+          <span id="validation-date-hint" class="govuk-hint">
+            For example, 29 10 2019
+          </span>
+          <div class="govuk-date-input" id="validation-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="validation-date-day">
+                  Day
                 </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-8" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-8">
-                  Internships, paid or supported
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-6" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-6">
-                  Job shadowing opportunities
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-3" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-3">
-                  Paid employment
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-9" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-9">
-                  Sector-based work academy placements
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-9" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-9">
-                  Student placements
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-7" name="commitments" type="checkbox" value="farm">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-7">
-                  Traineeships
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments" name="commitments" type="checkbox" value="carcasses">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments">
-                  Work experience
-                </label>
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="commitments-2" name="commitments" type="checkbox" value="mines">
-                <label class="govuk-label govuk-checkboxes__label" for="commitments-2">
-                  Work trials
-                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="validation-date-day" name="validation-date-day" type="number" pattern="[0-9]*">
               </div>
             </div>
-          </fieldset>
-        </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="validation-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="validation-date-month" name="validation-date-month" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="validation-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="validation-date-year" name="validation-date-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          How the business is showing leadership
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Details of the activities they have taken, or are taking, in support of being a Disability Confident leader.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
 
       <button class="govuk-button" data-module="govuk-button">Update employer record</button>
 
