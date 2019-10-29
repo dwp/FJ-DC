@@ -1,0 +1,96 @@
+  
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">Find a company</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Enter company name or registration number
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+      </div>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">ID</th>
+            <th scope="col" class="govuk-table__header">Company</th>
+            <th scope="col" class="govuk-table__header">Level</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00001</a></th>
+            <td class="govuk-table__cell">Arkwright's</td>
+            <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag">Pending</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00002</a></th>
+            <td class="govuk-table__cell">Fawlty Towers</td>
+            <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag">Pending</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00003</a></th>
+            <td class="govuk-table__cell">Fantasy Bazaar</td>
+            <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag">Pending</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00004</a></th>
+            <td class="govuk-table__cell">Sunshine Desserts</td>
+            <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00005</a></th>
+            <td class="govuk-table__cell">Wernham Hogg</td>
+            <td class="govuk-table__cell">Employer: level 2</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00006</a></th>
+            <td class="govuk-table__cell">Kathy's Cafe</td>
+            <td class="govuk-table__cell">Leader: level 3</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00007</a></th>
+            <td class="govuk-table__cell">Harold's Store</td>
+            <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--danger">Rejected</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/v2/applicant" class="govuk-link">DSC00008</a></th>
+            <td class="govuk-table__cell">Rovers Return Inn</td>
+            <td class="govuk-table__cell">Employer: level 2</td>
+            <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--warning">Expired</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <br>
+
+    <p><a href="#">Download all employer data as a CSV</a></p>
+
+  </div>
+
+</div>
+
+{% endblock %}

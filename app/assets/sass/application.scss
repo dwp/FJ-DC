@@ -92,3 +92,35 @@ a.email-link {
   background-position: 0 4px;
   padding-left: 30px;
 }
+
+.app-c-tag {
+  background-color: #005ea5;
+  color: #fff;
+  display: inline-block;
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  padding: 5px 8px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.app-c-tag--success {
+  background-color: #85994b;
+}
+
+.app-c-tag--warning {
+  background-color: #b58840;
+}
+
+.app-c-tag--danger {
+  background-color: #df3034;
+}
+
+
+
+
+
+

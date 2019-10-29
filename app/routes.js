@@ -1,36 +1,45 @@
-module.exports = {
+const express = require('express')
+const router = express.Router()
 
-  bind: function (app) {
+// Add your routes here - above the module.exports line
 
-    app.get('/', function (req, res) {
-      res.render('index');
-    });
+// Commitments for different Disability Confident levels
 
-    app.get('/examples/template-data', function (req, res) {
-      res.render('examples/template-data', { 'name' : 'Foo' });
-    });
+router.post('v2/dc-commitments-level-1', function (req, res) {
 
-    // Includes
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
 
-    // Experiments
-    require('./routes/va.js')(app);
+  let dcLevel = req.session.data['dc-level']
 
-    // Processing centre versions
-    require('./routes/v2.js')(app);
-    require('./routes/v3.js')(app);
-    require('./routes/v4.js')(app);
-    require('./routes/v5.js')(app);
-
-    // Work coach versions
-    require('./routes/wcv1.js')(app);
-    require('./routes/wcv2.js')(app);
-    require('./routes/wcv3.js')(app);
-    require('./routes/wcv4.js')(app);
-    require('./routes/wcv5.js')(app);
-
-    // Screens for JIRA stories
-    require('./routes/iteration-1.js')(app);
-    require('./routes/iteration-3.js')(app);
-
+  if (dcLevel === 'level-2') {
+    res.redirect('v2/dc-commitments-level-2')
   }
-}
+  if (dcLevel === 'level-3') {
+    res.redirect('v2/dc-commitments-level-3')
+  } 
+  else {
+    res.redirect('v2/dc-commitments-level-1')
+  }
+})
+
+// Change registration status
+
+router.post('v2/status-accepted', function (req, res) {
+
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+
+  let status = req.session.data['status']
+
+  if (status === 'rejected') {
+    res.redirect('v2/status-reason-for-rejection')
+  }
+  else {
+    res.redirect('v2/status-accepted')
+  }
+})
+
+module.exports = router
