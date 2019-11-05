@@ -49,7 +49,6 @@ router.post('v2/dc-commitments-level-1', function (req, res) {
 // Notify routes
 
 router.post('/v2/status', function (req, res) {
-  // let status = req.body.statusAccepted;
   let status = req.session.data['status']
   if (status === 'rejected') {
     res.redirect('/v2/status-reason-for-rejection')
@@ -68,8 +67,8 @@ router.post('/v2/status', function (req, res) {
 });
 
 router.post('/v2/status-reason-for-rejection', function (req, res) {
-    // let status = req.body.statusAccepted;
     let status = req.session.data['status']
+    
     if (status === 'not-UK') {
       notify.sendEmail(
         // this long string is the template ID, copy it from the template
@@ -81,6 +80,7 @@ router.post('/v2/status-reason-for-rejection', function (req, res) {
       );
       res.redirect('/v2/status-not-uk')
     }
+
     if (status === 'duplicate') {
       notify.sendEmail(
         // this long string is the template ID, copy it from the template
@@ -103,8 +103,7 @@ router.post('/v2/status-reason-for-rejection', function (req, res) {
         config.emailAddress
       );
       res.redirect('/v2/status-already-national')
-    }
-    else {
+    } else {
       notify.sendEmail(
         // this long string is the template ID, copy it from the template
         // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
