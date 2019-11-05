@@ -32,6 +32,6 @@ module.exports = {
   useBrowserSync: 'true',
 
   // Email address for testing
-  emailAddress: 'leah.smith@engineering.digital.dwp.gov.uk'
+  emailAddress: 'dean.smith@engineering.digital.dwp.gov.uk'
 
 }
