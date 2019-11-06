@@ -9,7 +9,7 @@ const config = require('./config')
 
 // Commitments for different Disability Confident levels
 
-router.post('v2/dc-commitments-level-1', function (req, res) {
+router.post('/v2/dc-commitments-level-1', function (req, res) {
 
     // Get the answer from session data
     // The name between the quotes is the same as the 'name' attribute on the input elements
@@ -17,14 +17,14 @@ router.post('v2/dc-commitments-level-1', function (req, res) {
 
   let dcLevel = req.session.data['dc-level']
 
-  if (dcLevel === 'level-2') {
-    res.redirect('v2/dc-commitments-level-2')
+  if (dcLevel === 'Employer') {
+    res.redirect('/v2/dc-commitments-level-2')
   }
-  if (dcLevel === 'level-3') {
-    res.redirect('v2/dc-commitments-level-3')
+  if (dcLevel === 'Leader') {
+    res.redirect('/v2/dc-commitments-level-3')
   } 
   else {
-    res.redirect('v2/dc-commitments-level-1')
+    res.redirect('/v2/dc-commitments-level-1')
   }
 })
 
