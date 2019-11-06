@@ -41,7 +41,7 @@ router.post('/v2/status', function (req, res) {
       // this long string is the template ID, copy it from the template
       // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
       // in your code.
-      'b4c3fc3e-c05d-4865-aa5f-a520fc0deab1',
+      '8cde863a-62b4-47a6-8332-fea056549d15',
       // pulls 'emailAddress' variable set in the config file
       config.emailAddress
     );
