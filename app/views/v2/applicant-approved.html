@@ -1,0 +1,46 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v2/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    {% include "v2/_applicant-details.html" %}
+    {% include "v2/_applicant-details-approved.html" %}
+
+  </div>
+
+  {% if getData.status === "verified" %}
+  {% else %}
+    <div class="govuk-grid-column-one-third">
+      <aside class="app-related-items status-verified" role="complementary">
+        <h3 class="govuk-heading-m" id="claim-actions-title">Case actions</h3>
+        <a href="/v2/status" class="govuk-button">Confirm employer status</a>
+        <p><a href="/v2/dc-level">Change Disability Confident details</a></p>
+        <p><a href="/v2/delete-employer">Delete employer</a></p>
+      </aside>
+    </div>{# /govuk-grid-column-one-third #}
+  {% endif %}
+
+</div>{# /govuk-grid-row #}
+
+{% endblock %}
