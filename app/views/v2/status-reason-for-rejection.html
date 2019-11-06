@@ -45,22 +45,27 @@
             </h1>
           </legend>
 
+
+
+
+
+
           <div class="govuk-radios">
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="cannot-verify" name="status" type="radio" value="cannot-verify" aria-describedby="hint-cannot-verify">
               <label class="govuk-label govuk-radios__label govuk-label--s" for="cannot-verify">
-                Could not verify employer
+                Unable to verify
               </label>
-              <span id="hint-cannot-verify" class="govuk-hint govuk-radios__hint">The employer does not appear to be genuine.</span>
+              <span id="hint-cannot-verify" class="govuk-hint govuk-radios__hint">You have not been able to verify their details.</span>
             </div>
 
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="duplicate" name="status" type="radio" value="duplicate" aria-describedby="hint-duplicate">
               <label class="govuk-label govuk-radios__label govuk-label--s" for="duplicate">
-                Duplicate of an existing record
+                Duplicate record
               </label>
-              <span id="hint-duplicate" class="govuk-hint govuk-radios__hint">The employer is already registered.</span>
+              <span id="hint-duplicate" class="govuk-hint govuk-radios__hint">They are already registered and we will update their details if necessary.</span>
             </div>
 
             <div class="govuk-radios__item">
@@ -68,7 +73,7 @@
               <label class="govuk-label govuk-radios__label govuk-label--s" for="already-national">
                 Already registered on a national level
               </label>
-              <span id="hint-already-national" class="govuk-hint govuk-radios__hint">The employer is already registered at a national level.</span>
+              <span id="hint-already-national" class="govuk-hint govuk-radios__hint">The employer cannot register because they are already registered at a national level.</span>
             </div>
 
             <div class="govuk-radios__item">
@@ -76,7 +81,7 @@
               <label class="govuk-label govuk-radios__label govuk-label--s" for="not-UK">
                 Not based in the United Kingdom
               </label>
-              <span id="hint-not-UK" class="govuk-hint govuk-radios__hint">The employer cannot register because the scheme is only open to employers based in the United Kingdom.</span>
+              <span id="hint-not-UK" class="govuk-hint govuk-radios__hint">The employer cannot register becauyse the scheme is only open to employers based in the United Kingdom.</span>
             </div>
 
           </div>
