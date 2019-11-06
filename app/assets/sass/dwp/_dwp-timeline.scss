@@ -1,11 +1,13 @@
 .dwp-timeline {
   border-left: 3px solid govuk-colour("blue");
+  padding: 0px;
 }
 
 .dwp-timeline__entry {
   margin: 2em 0;
   padding-left: 1em;
   position: relative;
+  list-style-type: none;
 
   &::before {
     background-color: govuk-colour("blue");
