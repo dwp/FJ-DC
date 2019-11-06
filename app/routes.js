@@ -28,23 +28,6 @@ router.post('v2/dc-commitments-level-1', function (req, res) {
   }
 })
 
-// Change registration status
-
-// router.post('v2/status-accepted', function (req, res) {
-
-//     // Get the answer from session data
-//     // The name between the quotes is the same as the 'name' attribute on the input elements
-//     // However in JavaScript we can't use hyphens in variable names
-
-//   let status = req.session.data['status']
-
-//   if (status === 'rejected') {
-//     res.redirect('v2/status-reason-for-rejection')
-//   }
-//   else {
-//     res.redirect('v2/status-accepted')
-//   }
-// })
 
 // Notify routes
 
