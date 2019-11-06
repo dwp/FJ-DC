@@ -13,6 +13,16 @@
   {% include "v2/_key-details.html" %}
 {% endblock %}
 {% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }}
+
   <div class="govuk-!-margin-bottom-5">
     <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
   </div>
