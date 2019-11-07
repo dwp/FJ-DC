@@ -1,0 +1,285 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v2/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Change company details</h1>
+
+      <form class="form" action="/v2/applicant" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Company name
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+     <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Contact details
+          </h2>
+        </legend>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Contact name
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Email address
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Phone number
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+    </fieldset>
+
+     <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Company address
+          </h2>
+        </legend>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-1">
+            Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-line-2">
+            <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+          </label>
+          <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-town">
+            Town or city
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-county">
+            County
+          </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="address-postcode">
+            Postcode
+          </label>
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+        </div>
+
+      </fieldset>
+
+     <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Type of business
+          </h2>
+        </legend>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Industry sector
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="Administration">Administration</option>
+          <option value="Agriculture" selected>Agriculture</option>
+          <option value="Armed forces">Armed forces</option>
+          <option value="Arts and Media">Arts and media</option>
+          <option value="Beauty and Therapy">Beauty and therapy</option>
+          <option value="Care, childcare or social care">Care, childcare or social care</option>
+          <option value="Construction">Construction</option>
+          <option value="Contact Centres">Contact Centres</option>
+          <option value="Customer service">Customer service</option>
+          <option value="Education and teaching">Education and teaching</option>
+          <option value="Energy and utilities">Energy and utilities</option>
+          <option value="Facilities management">Facilities management</option>
+          <option value="Financial services">Financial services</option>
+          <option value="Health">Health</option>
+          <option value="Hospitality, leisure and tourism">Hospitality, leisure and tourism</option>
+          <option value="Information technology and telecoms">Information technology and telecoms</option>
+          <option value="Manufacturing and engineering">Manufacturing and engineering</option>
+          <option value="Public sector">Public sector</option>
+          <option value="Recruitment agencies">Recruitment agencies</option>
+          <option value="Retail and sales">Retail and sales</option>
+          <option value="Security and safety">Security and safety</option>
+          <option value="Sports and recreation">Sports and recreation</option>
+          <option value="Transport and logistics">Transport and logistics</option>
+          <option value="Voluntary, charity and social enterprise">Voluntary, charity and social enterprise</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Public sector classification
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="None" selected>None: private company</option>
+          <option value="Clinical Commissioning Group">Clinical Commissioning Group</option>
+          <option value="Fire">Fire</option>
+          <option value="Government">Government</option>
+          <option value="Local authority" selected>Local authority</option>
+          <option value="MP">MP</option>
+          <option value="NHS Trust">NHS Trust</option>
+          <option value="Police">Police</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Number of employees
+        </label>
+        <input class="govuk-input govuk-input--width-5" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Jobcentre district
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="Avon, Somerset and Gloucestershire">Avon, Somerset and Gloucestershire</option>
+          <option value="Bedfordshire and Hertfordshire">Bedfordshire and Hertfordshire</option>
+          <option value="Berkshire, Buckinghamshire and Oxfordshire">Berkshire, Buckinghamshire and Oxfordshire</option>
+          <option value="Birmingham and Solihull">Birmingham and Solihull</option>
+          <option value="Black Country">Black Country</option>
+          <option value="Central Scotland">Central Scotland</option>
+          <option value="Cheshire">Cheshire</option>
+          <option value="Cumbria and Lancashire">Cumbria and Lancashire</option>
+          <option value="Devon and Cornwall">Devon and Cornwall</option>
+          <option value="Dorset, Wiltshire, Hampshire and Isle of Wight">Dorset, Wiltshire, Hampshire and Isle of Wight</option>
+          <option value="Durham and Tees Valley">Durham and Tees Valley</option>
+          <option value="East Anglia">East Anglia</option>
+          <option value="East London">East London</option>
+          <option value="East Scotland">East Scotland</option>
+          <option value="Essex">Essex</option>
+          <option value="Greater Manchester">Greater Manchester</option>
+          <option value="Kent">Kent</option>
+          <option value="Leicestershire and Northamptonshire">Leicestershire and Northamptonshire</option>
+          <option value="Lincolnshire, Nottinghamshire and Rutland">Lincolnshire, Nottinghamshire and Rutland</option>
+          <option value="Mercia">Mercia</option>
+          <option value="Merseyside">Merseyside</option>
+          <option value="NEPT">NEPT</option>
+          <option value="North and Mid Wales">North and Mid Wales</option>
+          <option value="North East Scotland">North East Scotland</option>
+          <option value="North East Yorks and the Humber">North East Yorks and the Humber</option>
+          <option value="North London">North London</option>
+          <option value="Northern Ireland">Northern Ireland</option>
+          <option value="Northern Scotland">Northern Scotland</option>
+          <option value="Northumberland, Tyne and Wear">Northumberland, Tyne and Wear</option>
+          <option value="South East Wales">South East Wales</option>
+          <option value="South London">South London</option>
+          <option value="South West Scotland">South West Scotland</option>
+          <option value="South West Wales">South West Wales</option>
+          <option value="South Yorkshire" selected>South Yorkshire</option>
+          <option value="Staffordshire and Derbyshire">Staffordshire and Derbyshire</option>
+          <option value="Surrey and Sussex">Surrey and Sussex</option>
+          <option value="West London">West London</option>
+          <option value="West Scotland">West Scotland</option>
+          <option value="West Yorkshire">West Yorkshire</option>
+        </select>
+      </div>
+
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Jobcentre group
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="Central and West Scotland">Central and West Scotland</option>
+    <option value="East and North Scotland" selected>East and North Scotland</option>
+    <option value="London and Essex">London and Essex</option>
+    <option value="National">National</option>
+    <option value="North and East Midlands">North and East Midlands</option>
+    <option value="North Central" selected>North Central</option>
+    <option value="North East">North East</option>
+    <option value="North West">North West</option>
+    <option value="Northern Ireland">Northern Ireland</option>
+    <option value="South East">South East</option>
+    <option value="South West">South West</option>
+    <option value="Wales">Wales</option>
+    <option value="West Midlands">West Midlands</option>
+  </select>
+</div>
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Update employer record</button>
+
+      <p><a href="/v2/applicant" class="govuk-link">Cancel</a></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}
