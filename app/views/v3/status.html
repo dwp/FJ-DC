@@ -1,0 +1,76 @@
+  
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v2/_key-details.html" %}
+{% endblock %}
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form method="post" class="form">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Confirm employer status
+            </h1>
+          </legend>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="accepted" name="status" type="radio" value="accepted" aria-describedby="hint-accepted">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="accepted">
+                Accepted
+              </label>
+              <span id="hint-accepted" class="govuk-hint govuk-radios__hint">Send the employer their badge, certificate and information.</span>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rejected" name="status" type="radio" value="rejected" aria-describedby="hint-rejected">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="rejected">
+                Rejected
+              </label>
+              <span id="hint-rejected" class="govuk-hint govuk-radios__hint">You will need to select the reason why.</span>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

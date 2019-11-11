@@ -1,0 +1,49 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Check your email and activate your account – Find a job – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div>
+        <p><strong>From: Manage Disability Confident employers Fresh Desk [no-reply@dwp.gov.uk]</strong></p>
+        <p><strong>Subject: Arkwright's - new level 1 Disability Confident registration</strong></p>
+      </div>
+
+      <h1 class="govuk-heading-l">You need to check a new level 1 Disability Confident registration</h1>
+
+      <p>Arkwright's<br>
+      Main Street, Balby, South Yorkshire, DN4 9ZZ<br>
+      Albert Arkwright<br>
+      <a href="mailto:arkwright@internet.com">arkwright@internet.com</a>
+      <br>
+      01234 567 890<br>
+      Registered at 9:15pm on 8 November 2019</p>
+
+      <p>Check their details and confirm if they can be registered: 
+      <a href="/v3/sign-in">https://www.manage-dc-employers.dwp.gov.uk</a>
+      </a>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v2/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Level 3: confirmation of their self-assessment</h1>
+
+      <form class="form" action="/v2/applicant" method="post">
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Validating organisation name
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Contact name at validating organisation
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Validator email
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Validator phone number
+        </label>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" role="group" aria-describedby="validation-date-hint">
+          <label class="govuk-label" for="validation-date">
+              Date of validation
+          </label>
+          <span id="validation-date-hint" class="govuk-hint">
+            For example, 29 10 2019
+          </span>
+          <div class="govuk-date-input" id="validation-date">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="validation-date-day">
+                  Day
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="validation-date-day" name="validation-date-day" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="validation-date-month">
+                  Month
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="validation-date-month" name="validation-date-month" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="validation-date-year">
+                  Year
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="validation-date-year" name="validation-date-year" type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          How the business is showing leadership
+        </label>
+        <span id="more-detail-hint" class="govuk-hint">
+          Details of the activities they have taken, or are taking, in support of being a Disability Confident leader.
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">Update employer record</button>
+
+      <p><a href="/v2/applicant" class="govuk-link">Cancel</a></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

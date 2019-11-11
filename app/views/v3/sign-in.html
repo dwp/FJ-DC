@@ -1,0 +1,60 @@
+  
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <br>
+
+      <h1 class="govuk-heading-l">Sign in</h1>
+
+      <form class="form" action="/v3/search" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Email address
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Password
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>        
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        <p><a href="#">Reset your password</a></p>
+
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

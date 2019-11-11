@@ -1,0 +1,171 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v2/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v2/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form action="/v2/applicant" method="post" class="form">
+
+        <h1 class="govuk-heading-l">Level 2 commitments</h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="commitments-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Theme 1: getting the right people
+              </h2>
+            </legend>
+            <span id="commitments-hint" class="govuk-hint">
+              Select all that apply.
+            </span>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-1" name="theme-1-theme-1-commitments" type="checkbox" value="Apprenticeships">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-1">
+                  Apprenticeships
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-2" name="theme-1-commitments" type="checkbox" value="Internships, paid or supported">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-2">
+                  Internships, paid or supported
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-3" name="theme-1-commitments" type="checkbox" value="Job shadowing opportunities">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-3">
+                  Job shadowing opportunities
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-4" name="theme-1-commitments" type="checkbox" value="Paid employment">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-4">
+                  Paid employment
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-5" name="theme-1-commitments" type="checkbox" value="Sector-based work academy placements">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-5">
+                  Sector-based work academy placements
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-6" name="theme-1-commitments" type="checkbox" value="Student placements">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-6">
+                  Student placements
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-7" name="theme-1-commitments" type="checkbox" value="Traineeships">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-7">
+                  Traineeships
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-8" name="theme-1-commitments" type="checkbox" value="Work experience">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-8">
+                  Work experience
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-9" name="theme-1-commitments" type="checkbox" value="Work trials">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-9">
+                  Work trials
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="commitments-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Theme 2: keeping and developing people
+              </h2>
+            </legend>
+            <span id="commitments-hint" class="govuk-hint">
+              Select all that apply.
+            </span>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-10" name="theme-2-commitments" type="checkbox" value="Disability awareness equality training in induction programmes">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-10">
+                  Disability awareness equality training in induction programmes
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-11" name="theme-2-commitments" type="checkbox" value="Guiding staff to information and advice on mental health conditions">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-11">
+                  Guiding staff to information and advice on mental health conditions
+                </label>
+              </div>
+             <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-12" name="theme-2-commitments" type="checkbox" value="Human resource managers with specific Disability Confident training">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-12">
+                  Human resource managers with specific Disability Confident training
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-13" name="theme-2-commitments" type="checkbox" value="Identifying and sharing good practices">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-13">
+                  Identifying and sharing good practices
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-14" name="theme-2-commitments" type="checkbox" value="Mentoring, coaching, buddying and other support networks for staff">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-14">
+                  Mentoring, coaching, buddying and other support networks for staff
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="commitments-15" name="theme-2-commitments" type="checkbox" value="Occupational health services">
+                <label class="govuk-label govuk-checkboxes__label" for="commitments-15">
+                  Occupational health services
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+      <button class="govuk-button" data-module="govuk-button">Update employer record</button>
+
+      <p><a href="/v2/applicant" class="govuk-link">Cancel</a></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}
