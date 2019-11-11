@@ -22,7 +22,10 @@
     },
     html: 'Messages are not real and no data is saved.'
   }) }}
-  
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
 {% endblock %}
 
 {% block content %}
@@ -31,15 +34,17 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-      <br>
+    <h1 class="govuk-heading-l">If the company is already registered</h1>
 
-      <h1 class="govuk-heading-l">
-        Employer registration rejected
-      </h1>
+    <p>You should now, where appropriate:</p>
 
-      <p>The employer has been emailed the reason why.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>find and update the original company record with any new details</li>
+      <li>delete the duplicate record</li>
+      <li>email the employer to remind them of their Disability Confident details</li>
+    </ul>
 
-      <a class="govuk-button" href="/v3/search">Finish</a>
+    <a class="govuk-button" href="/v3/search">Back to company list</a>
 
   </div>
 

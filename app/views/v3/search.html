@@ -2,11 +2,11 @@
 {% extends "layout-staff.html" %}
 
 {% block pageTitle %}
-  {% include "v2/_service-name.html" %}
+  {% include "v3/_service-name.html" %}
 {% endblock %}
 
 {% block serviceName %}
-  {% include "v2/_service-name.html" %}
+  {% include "v3/_service-name.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -35,9 +35,9 @@
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
-          Enter company name or registration number
+          Company name, postcode or ID number
         </label>
-        <input class="govuk-input govuk-!-width-two-thirds" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        <input class="govuk-input govuk-!-width-two-thirds" id="search-company-name" name="search-company-name" type="text" aria-describedby="event-name-hint">
       </div>
 
       <table class="govuk-table">
@@ -45,8 +45,9 @@
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Company</th>
             <th scope="col" class="govuk-table__header">Postcode</th>
-            <th scope="col" class="govuk-table__header">ID</th>
+            <th scope="col" class="govuk-table__header">Contact name</th>
             <th scope="col" class="govuk-table__header">Level</th>
+            <th scope="col" class="govuk-table__header">ID</th>
             <th scope="col" class="govuk-table__header">Status</th>
           </tr>
         </thead>
@@ -54,57 +55,65 @@
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Fantasy Bazaar</a></th>
             <td class="govuk-table__cell">TO1 1XX</td>
-            <td class="govuk-table__cell">None</td>
+            <td class="govuk-table__cell">Tim Bisley</td>
             <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell">None</td>
             <td class="govuk-table__cell"><strong class="app-c-tag">New</strong></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Fawlty Towers</a></th>
             <td class="govuk-table__cell">DE2 2YY</td>
-            <td class="govuk-table__cell">None</td>
+            <td class="govuk-table__cell">Sybil Fawlty</td>
             <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell">None</td>
             <td class="govuk-table__cell"><strong class="app-c-tag">New</strong></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Arkwright's</a></th>
             <td class="govuk-table__cell">DN4 9ZZ</td>
-            <td class="govuk-table__cell">None</td>
+            <td class="govuk-table__cell">Albert Arkwright</td>
             <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell">None</td>
             <td class="govuk-table__cell"><strong class="app-c-tag">New</strong></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Sunshine Desserts</a></th>
             <td class="govuk-table__cell">LE3 5QQ</td>
-            <td class="govuk-table__cell">DSC00004</td>
+            <td class="govuk-table__cell">Reginald Perrin</td>
             <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell">DSC00004</td>
             <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Wernham Hogg</a></th>
             <td class="govuk-table__cell">GD9 8II</td>
-            <td class="govuk-table__cell">DSC00005</td>
+            <td class="govuk-table__cell">Dawn Tinsley</td>
             <td class="govuk-table__cell">Employer: level 2</td>
+            <td class="govuk-table__cell">DSC00005</td>
             <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</strong></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Kathy's Cafe</a></th>
             <td class="govuk-table__cell">LD8 2ZZ</td>
-            <td class="govuk-table__cell">DSC00006</td>
+            <td class="govuk-table__cell">Kathy Beale</td>
             <td class="govuk-table__cell">Leader: level 3</td>
+            <td class="govuk-table__cell">DSC00006</td>
             <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</strong></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Harold's Store</a></th>
             <td class="govuk-table__cell">EN6 8JJ</td>
-            <td class="govuk-table__cell">DSC00007</td>
+            <td class="govuk-table__cell">Harold Bishop</td>
             <td class="govuk-table__cell">Committed: level 1</td>
+            <td class="govuk-table__cell">DSC00007</td>
             <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--success">Approved</strong></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/v3/applicant" class="govuk-link">Rovers Return Inn</a></th>
             <td class="govuk-table__cell">CI4 6KK</td>
-            <td class="govuk-table__cell">DSC00008</td>
+            <td class="govuk-table__cell">Vera Duckworth</td>
             <td class="govuk-table__cell">Employer: level 2</td>
+            <td class="govuk-table__cell">DSC00008</td>
             <td class="govuk-table__cell"><strong class="app-c-tag app-c-tag--warning">Expired</strong></td>
           </tr>
         </tbody>

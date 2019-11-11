@@ -2,15 +2,15 @@
 {% extends "layout-staff.html" %}
 
 {% block pageTitle %}
-  {% include "v2/_service-name.html" %}
+  {% include "v3/_service-name.html" %}
 {% endblock %}
 
 {% block serviceName %}
-  {% include "v2/_service-name.html" %}
+  {% include "v3/_service-name.html" %}
 {% endblock %}
 
 {% block keyDetails %}
-  {% include "v2/_key-details.html" %}
+  {% include "v3/_key-details.html" %}
 {% endblock %}
 {% block beforeContent %}
 
@@ -34,34 +34,30 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <form method="post" class="form">
+    <form action="/v3/remaining-company-details" method="post" class="form">
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Confirm employer status
+              Is the company is a new registration?
             </h1>
-          </legend>
-
-          <div class="govuk-radios">
+          </legend> 
+          </span>
+          <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="accepted" name="status" type="radio" value="accepted" aria-describedby="hint-accepted">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="accepted">
-                Accepted
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes, they are new to the scheme
               </label>
-              <span id="hint-accepted" class="govuk-hint govuk-radios__hint">Send the employer their badge, certificate and information.</span>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="rejected" name="status" type="radio" value="rejected" aria-describedby="hint-rejected">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="rejected">
-                Rejected
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No, they are already registered under the same details or at a national level
               </label>
-              <span id="hint-rejected" class="govuk-hint govuk-radios__hint">You will need to select the reason why.</span>
             </div>
           </div>
-
         </fieldset>
       </div>
 
