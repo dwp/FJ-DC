@@ -79,4 +79,18 @@ router.post('/v2/status-reason-for-rejection', function (req, res) {
     }
   });
 
+// v3 where company is a duplicate and can't approve
+
+router.post('/v3/other-company-details', function (req, res) {
+
+  let ifNew = req.session.data['if-new']
+
+  if (ifNew === 'if-new-yes') {
+    res.redirect('/v3/other-company-details')
+  }
+  else {
+    res.redirect('/v3/if-duplicate')
+  }
+})
+
 module.exports = router
