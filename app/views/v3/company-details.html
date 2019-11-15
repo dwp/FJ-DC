@@ -119,14 +119,7 @@
 
       </fieldset>
 
-     <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h2 class="govuk-fieldset__heading">
-            Type of company
-          </h2>
-        </legend>
-
-      <div class="govuk-form-group">
+{#       <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
           Area of operation
         </label>
@@ -145,16 +138,129 @@
           <option value="West Midlands">West Midlands</option>
           <option value="Yorkshire" selected>Yorkshire</option>
         </select>
+      </div> #}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="area-of-operation-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Area of operation
+            </h2>
+          </legend>
+          <span id="area-of-operation-hint" class="govuk-hint">
+            Select all that apply.
+          </span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation" name="area-of-operation" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation">
+                East of England
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-2" name="area-of-operation" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-2">
+                East Midlands
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-3" name="area-of-operation" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-3">
+                London
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-4" name="area-of-operation" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-4">
+                National
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-5" name="area-of-operation" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-5">
+                East Midlands
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-6" name="area-of-operation" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-6">
+                London
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-7" name="area-of-operation" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-7">
+                National
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-7" name="area-of-operation" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-7">
+                North East
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-8" name="area-of-operation" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-8">
+                North West
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-9" name="area-of-operation" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-9">
+                Northern Ireland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-10" name="area-of-operation" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-10">
+                Scotland
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-11" name="area-of-operation" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-11">
+                South East
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-12" name="area-of-operation" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-12">
+                South West
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-13" name="area-of-operation" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-13">
+                Wales
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-14" name="area-of-operation" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-14">
+                West Midlands
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="area-of-operation-15" name="area-of-operation" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="area-of-operation-15">
+                Yorkshire
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
           Number of employees
-        </label>
+          </h2>
+        </legend>
         <input class="govuk-input govuk-input--width-5" id="event-name" name="event-name" type="text" value="2">
       </div>
 
-      <div class="govuk-form-group">
+{#       <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
           Industry sector
         </label>
@@ -166,7 +272,7 @@
           <option value="Beauty and therapy">Beauty and therapy</option>
           <option value="Care, childcare or social care">Care, childcare or social care</option>
           <option value="Construction">Construction</option>
-          <option value="Contact centres">Contact Centres</option>
+          <option value="Contact centres">Contact centres</option>
           <option value="Customer service">Customer service</option>
           <option value="Education and teaching">Education and teaching</option>
           <option value="Energy and utilities">Energy and utilities</option>
@@ -185,6 +291,169 @@
           <option value="Voluntary, charity and social enterprise">Voluntary, charity and social enterprise</option>
           <option value="Other">Other</option>
         </select>
+      </div> #}
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Industry sector
+            </h2>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type" name="public-sector-type" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type">
+                Administration
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-2" name="public-sector-type" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-2">
+                Agriculture
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-3" name="public-sector-type" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-3">
+                Armed forces
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-4" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-4">
+                Arts and media
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-5" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-5">
+                Beauty and therapy
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-6" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-6">
+                Care, childcare or social care
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-7" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-7">
+                Construction
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-8" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-8">
+                Contact centres
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-9" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-9">
+                Customer service
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-10" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-10">
+                Education and teaching
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-11" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-11">
+                Energy and utilities
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-12" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-12">
+                Facilities management
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-13" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-13">
+                Financial services
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-14" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-14">
+                Health
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-15" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-15">
+                Hospitality, leisure and tourism
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-16" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-16">
+                Information technology and telecoms
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-17" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-17">
+                Manufacturing and engineering
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-18" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-18">
+                Public sector
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-19" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-19">
+                Recruitment agencies
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-20" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-20">
+                Retail and sales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-21" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-21">
+                Security and safety
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-22" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-22">
+                Sports and recreation
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-23" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-23">
+                Transport and logistics
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-24" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-24">
+                Voluntary, charity and social enterprise
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-25" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-25">
+                Other
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
 
       </fieldset>
