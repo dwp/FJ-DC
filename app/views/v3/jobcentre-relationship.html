@@ -1,0 +1,365 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v3/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v3/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v3/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }} #}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/v3/public-sector-type" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which jobcentre district does the employer match to?
+            </h1>
+          </legend>
+
+            <dl class="govuk-summary-list">
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Postcode
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  DN4 9ZZ
+                </dd>
+              </div>
+              <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">
+                  Area of operation
+                </dt>
+                <dd class="govuk-summary-list__value">
+                  <p class="govuk-body">South Yorkshire</p>
+                </dd>
+              </div>
+            </dl>
+
+          <p>Find the matching district through <a href="http://dbs02app/JCPOffices.nsf/WebV11?OpenFrameSet" target="_blank">FIND (opens in a new window)</a>.</p>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship" name="jobcentre-relationship" type="radio" value="Avon, Somerset and Gloucestershire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship">
+                Avon, Somerset and Gloucestershire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-2" name="jobcentre-relationship" type="radio" value="Bedfordshire and Hertfordshire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-2">
+                Bedfordshire and Hertfordshire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-3" name="jobcentre-relationship" type="radio" value="Berkshire, Buckinghamshire and Oxfordshire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-3">
+                Berkshire, Buckinghamshire and Oxfordshire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-4" name="jobcentre-relationship" type="radio" value="Birmingham and Solihull">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-4">
+                Birmingham and Solihull
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-5" name="jobcentre-relationship" type="radio" value="Black Country">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-5">
+                Black Country
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-6" name="jobcentre-relationship" type="radio" value="Central Scotland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-6">
+                Central Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-7" name="jobcentre-relationship" type="radio" value="Cheshire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-7">
+                Cheshire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-8" name="jobcentre-relationship" type="radio" value="Cumbria and Lancashire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-8">
+                Cumbria and Lancashire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-9" name="jobcentre-relationship" type="radio" value="Devon and Cornwall">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-9">
+                Devon and Cornwall
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-10" name="jobcentre-relationship" type="radio" value="Dorset, Wiltshire, Hampshire and Isle of Wight">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-10">
+                Dorset, Wiltshire, Hampshire and Isle of Wight
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-11" name="jobcentre-relationship" type="radio" value="Durham and Tees Valley">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-11">
+                Durham and Tees Valley
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-12" name="jobcentre-relationship" type="radio" value="East Anglia">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-12">
+                East Anglia
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-13" name="jobcentre-relationship" type="radio" value="East London">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-13">
+                East London
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-14" name="jobcentre-relationship" type="radio" value="East Scotland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-14">
+                East Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-15" name="jobcentre-relationship" type="radio" value="Essex">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-15">
+                Essex
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-16" name="jobcentre-relationship" type="radio" value="Greater Manchester">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-16">
+                Greater Manchester
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-17" name="jobcentre-relationship" type="radio" value="Kent">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-17">
+                Kent
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-18" name="jobcentre-relationship" type="radio" value="Leicestershire and Northamptonshire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-18">
+                Leicestershire and Northamptonshire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-19" name="jobcentre-relationship" type="radio" value="Lincolnshire, Nottinghamshire and Rutland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-19">
+                Lincolnshire, Nottinghamshire and Rutland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-20" name="jobcentre-relationship" type="radio" value="Mercia">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-20">
+                Mercia
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-21" name="jobcentre-relationship" type="radio" value="Merseyside">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-21">
+                Merseyside
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-22" name="jobcentre-relationship" type="radio" value="North and Mid Wales">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-22">
+                North and Mid Wales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-23" name="jobcentre-relationship" type="radio" value="North East Scotland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-23">
+                North East Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-24" name="jobcentre-relationship" type="radio" value="North East Yorkshire and the Humber">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-24">
+                North East Yorkshire and the Humber
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-25" name="jobcentre-relationship" type="radio" value="North London">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-25">
+                North London
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-26" name="jobcentre-relationship" type="radio" value="Northern Ireland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-26">
+                Northern Ireland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-27" name="jobcentre-relationship" type="radio" value="Northern Scotland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-27">
+                Northern Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-28" name="jobcentre-relationship" type="radio" value="Northumberland, Tyne and Wear">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-28">
+                Northumberland, Tyne and Wear
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-29" name="jobcentre-relationship" type="radio" value="South East Wales">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-29">
+                South East Wales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-30" name="jobcentre-relationship" type="radio" value="South London">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-30">
+                South London
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-31" name="jobcentre-relationship" type="radio" value="South West Scotland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-31">
+                South West Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-32" name="jobcentre-relationship" type="radio" value="South West Wales">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-32">
+                South West Wales
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-33" name="jobcentre-relationship" type="radio" value="South Yorkshire" checked>
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-33">
+                South Yorkshire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-34" name="jobcentre-relationship" type="radio" value="Staffordshire and Derbyshire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-34">
+                Staffordshire and Derbyshire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-35" name="jobcentre-relationship" type="radio" value="Surrey and Sussex">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-35">
+                Surrey and Sussex
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-36" name="jobcentre-relationship" type="radio" value="West London">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-36">
+                West London
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-37" name="jobcentre-relationship" type="radio" value="West Scotland">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-37">
+                West Scotland
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-38" name="jobcentre-relationship" type="radio" value="West Yorkshire">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-38">
+                West Yorkshire
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jobcentre-relationship-39" name="jobcentre-relationship" type="radio" value="NEPT">
+              <label class="govuk-label govuk-radios__label" for="jobcentre-relationship-39">
+                National Employer Partnersip Team
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+{#           <label class="govuk-label" for="sort">
+            District
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="Avon, Somerset and Gloucestershire">Avon, Somerset and Gloucestershire</option>
+            <option value="Bedfordshire and Hertfordshire">Bedfordshire and Hertfordshire</option>
+            <option value="Berkshire, Buckinghamshire and Oxfordshire">Berkshire, Buckinghamshire and Oxfordshire</option>
+            <option value="Birmingham and Solihull">Birmingham and Solihull</option>
+            <option value="Black Country">Black Country</option>
+            <option value="Central Scotland">Central Scotland</option>
+            <option value="Cheshire">Cheshire</option>
+            <option value="Cumbria and Lancashire">Cumbria and Lancashire</option>
+            <option value="Devon and Cornwall">Devon and Cornwall</option>
+            <option value="Dorset, Wiltshire, Hampshire and Isle of Wight">Dorset, Wiltshire, Hampshire and Isle of Wight</option>
+            <option value="Durham and Tees Valley">Durham and Tees Valley</option>
+            <option value="East Anglia">East Anglia</option>
+            <option value="East London">East London</option>
+            <option value="East Scotland">East Scotland</option>
+            <option value="Essex">Essex</option>
+            <option value="Greater Manchester">Greater Manchester</option>
+            <option value="Kent">Kent</option>
+            <option value="Leicestershire and Northamptonshire">Leicestershire and Northamptonshire</option>
+            <option value="Lincolnshire, Nottinghamshire and Rutland">Lincolnshire, Nottinghamshire and Rutland</option>
+            <option value="Mercia">Mercia</option>
+            <option value="Merseyside">Merseyside</option>
+            <option value="NEPT">National Employer Partnersip Team (NEPT)</option>
+            <option value="North and Mid Wales">North and Mid Wales</option>
+            <option value="North East Scotland">North East Scotland</option>
+            <option value="North East Yorks and the Humber">North East Yorks and the Humber</option>
+            <option value="North London">North London</option>
+            <option value="Northern Ireland">Northern Ireland</option>
+            <option value="Northern Scotland">Northern Scotland</option>
+            <option value="Northumberland, Tyne and Wear">Northumberland, Tyne and Wear</option>
+            <option value="South East Wales">South East Wales</option>
+            <option value="South London">South London</option>
+            <option value="South West Scotland">South West Scotland</option>
+            <option value="South West Wales">South West Wales</option>
+            <option value="South Yorkshire" selected>South Yorkshire</option>
+            <option value="Staffordshire and Derbyshire">Staffordshire and Derbyshire</option>
+            <option value="Surrey and Sussex">Surrey and Sussex</option>
+            <option value="West London">West London</option>
+            <option value="West Scotland">West Scotland</option>
+            <option value="West Yorkshire">West Yorkshire</option>
+          </select>
+        </div> #}
+
+        <p>Group (based on selected district): North Central</p>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

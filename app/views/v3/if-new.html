@@ -14,14 +14,14 @@
 {% endblock %}
 {% block beforeContent %}
 
-{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
   {{ govukPhaseBanner({
     tag: {
       text: "Testing only"
     },
     html: 'Messages are not real and no data is saved.'
-  }) }}
+  }) }} #}
 
   <div class="govuk-!-margin-bottom-5">
     <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
@@ -34,7 +34,7 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <form action="/v3/other-company-details" method="post" class="form">
+    <form action="/v3/jobcentre-relationship" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
@@ -47,7 +47,7 @@
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="if-new-yes" name="if-new" type="radio" value="if-new-yes">
-              <label class="govuk-label govuk-radios__label" for="changed-name">
+              <label class="govuk-label govuk-radios__label" for="if-new-yes">
                 Yes, they are new to the scheme
               </label>
             </div>

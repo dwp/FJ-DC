@@ -81,16 +81,37 @@ router.post('/v2/status-reason-for-rejection', function (req, res) {
 
 // v3 where company is a duplicate and can't approve
 
-router.post('/v3/other-company-details', function (req, res) {
+router.post('/v3/jobcentre-relationship', function (req, res) {
 
   let ifNew = req.session.data['if-new']
 
   if (ifNew === 'if-new-yes') {
-    res.redirect('/v3/other-company-details')
+    res.redirect('/v3/jobcentre-relationship')
   }
   else {
-    res.redirect('/v3/if-duplicate')
+    res.redirect('/v3/status-duplicate')
   }
 })
+
+// Notify routes
+
+router.post('/v3/status-accepted', function (req, res) {
+  let status = req.session.data['public-sector-type']
+  if (status === 'rejected') {
+    res.redirect('/v3/status-reason-for-rejection')
+  }
+  else {
+    notify.sendEmail(
+      // this long string is the template ID, copy it from the template
+      // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
+      // in your code.
+      '8cde863a-62b4-47a6-8332-fea056549d15',
+      // pulls 'emailAddress' variable set in the config file
+      config.emailAddress
+    );
+    res.redirect('/v3/status-accepted')
+  }
+});
+
 
 module.exports = router

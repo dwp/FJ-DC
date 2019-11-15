@@ -1,0 +1,110 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v3/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v3/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v3/_key-details.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }} #}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/v3/status-accepted" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is the company a specific type of public sector employer?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type" name="public-sector-type" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type">
+                Clinical commissioning group
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-2" name="public-sector-type" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-2">
+                Fire
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-3" name="public-sector-type" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-3">
+                Government
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-4" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-4">
+                Local authority
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-5" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-5">
+                Member of Parliament (MP)
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-6" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-6">
+                NHS trust
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-7" name="public-sector-type" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-7">
+                Police
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-sector-type-8" name="public-sector-type" type="radio" value="abroad" checked>
+              <label class="govuk-label govuk-radios__label" for="public-sector-type-8">
+                The company is not a public sector employer
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+ 
+      </fieldset>
+
+      <button class="govuk-button" data-module="govuk-button">Approve registration and send confirmation email</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+{% endblock %}

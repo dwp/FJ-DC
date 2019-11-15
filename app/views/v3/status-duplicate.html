@@ -1,3 +1,4 @@
+  
 {% extends "layout-staff.html" %}
 
 {% block pageTitle %}
@@ -11,17 +12,16 @@
 {% block keyDetails %}
   {% include "v3/_key-details.html" %}
 {% endblock %}
-
 {% block beforeContent %}
 
-{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
   {{ govukPhaseBanner({
     tag: {
       text: "Testing only"
     },
     html: 'Messages are not real and no data is saved.'
-  }) }}
+  }) }} #}
 
   <div class="govuk-!-margin-bottom-5">
     <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
@@ -34,17 +34,19 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">If the company is already registered</h1>
+      <h1 class="govuk-heading-l">Now update the company records</h1>
 
-    <p>You should now, where appropriate:</p>
+        <p>You should, where necessary:</p>
 
-    <ul class="govuk-list govuk-list--bullet">
-      <li>find and update the original company record with any new details</li>
-      <li>delete the duplicate record</li>
-      <li>email the employer to remind them of their Disability Confident details</li>
-    </ul>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>update the original employer record, such as the contact name or email address</li>
+          <li>contact the company to remind them of their Disability Confident details, such as their registration number, level and expiry date</li>
+          <li>delete this duplicate record</li>
+        </ul>
 
-    <a class="govuk-button" href="/v3/search">Back to company list</a>
+        <p><a href="/v3/applicant">Back to company record</a></p>
+
+      </form>
 
   </div>
 

@@ -14,14 +14,14 @@
 
 {% block beforeContent %}
 
-{% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
 
   {{ govukPhaseBanner({
     tag: {
       text: "Testing only"
     },
     html: 'Messages are not real and no data is saved.'
-  }) }}
+  }) }} #}
   
 {% endblock %}
 
@@ -32,8 +32,8 @@
   <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
-        <h1 class="govuk-panel__title">Employer registration accepted</h1>
-        <div class="govuk-panel__body">They've been emailed their badge, certificate and guidance</div>
+        <h1 class="govuk-panel__title">Registration approved</h1>
+        <div class="govuk-panel__body">The company has been emailed their guidance, badge and certificate</div>
       </div>
 
       <a class="govuk-button" href="/v3/search">Finish</a>
