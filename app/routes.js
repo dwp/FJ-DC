@@ -29,7 +29,7 @@ router.post('/v2/dc-commitments-level-1', function (req, res) {
 })
 
 
-// Notify routes
+// v2 Notify routes
 
 router.post('/v2/status', function (req, res) {
   let status = req.session.data['status']
@@ -93,7 +93,7 @@ router.post('/v3/jobcentre-relationship', function (req, res) {
   }
 })
 
-// Notify routes
+// v3 Notify accepted email
 
 router.post('/v3/status-accepted', function (req, res) {
   let status = req.session.data['public-sector-type']
@@ -112,6 +112,40 @@ router.post('/v3/status-accepted', function (req, res) {
     res.redirect('/v3/status-accepted')
   }
 });
+
+
+// v3 Notify rejected email
+
+router.post('/v2/status-rejected', function (req, res) {
+    let status = req.session.data['status']
+    
+    if (status === 'not-UK') {
+      notify.sendEmail(
+        'baa99093-c0f5-4624-8615-67e6290c1e7b',
+        config.emailAddress
+      );
+      res.redirect('/v2/status-cannot-verify')
+    } if (status === 'duplicate') {
+      notify.sendEmail(
+        'e40ecf01-d563-45a7-b31d-38087d330803',
+        config.emailAddress
+      );
+      res.redirect('/v2/status-cannot-verify')
+    } if (status === 'already-national') {
+      notify.sendEmail(
+        '27c9b1df-1a55-44b1-bd7b-7001709d16dc',
+        config.emailAddress
+      );
+      res.redirect('/v2/status-cannot-verify')
+    } else {
+      notify.sendEmail(
+        '9d037de7-f79c-42f1-9c67-2535dce0d170',
+        config.emailAddress
+      );
+      res.redirect('/v2/status-cannot-verify')
+    }
+  });
+
 
 
 module.exports = router

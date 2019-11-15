@@ -34,59 +34,42 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <form method="post">
+    <form action="/v3/status-rejected" method="post" class="form">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
 
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Confirm why you're rejecting the employer
+              Confirm why you're rejecting the company
             </h1>
           </legend>
 
           <div class="govuk-radios">
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="cannot-verify" name="status" type="radio" value="cannot-verify" aria-describedby="hint-cannot-verify">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="cannot-verify">
-                Unable to verify
+              <input class="govuk-radios__input" id="rejection-reason-1" name="rejection-reason" type="radio" value="cannot verify" aria-describedby="rejection-reason-1">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="rejection-reason-1">
+                Not able to confirm they are a genuine company
               </label>
-              <span id="hint-cannot-verify" class="govuk-hint govuk-radios__hint">You have not been able to verify their details.</span>
+              <span id="rejection-reason-1" class="govuk-hint govuk-radios__hint">They cannot register because you could not confirm the details needed to register them.</span>
             </div>
 
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="duplicate" name="status" type="radio" value="duplicate" aria-describedby="hint-duplicate">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="duplicate">
-                Duplicate record
-              </label>
-              <span id="hint-duplicate" class="govuk-hint govuk-radios__hint">They are already registered and we will update their details if necessary.</span>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="already-national" name="status" type="radio" value="already-national" aria-describedby="hint-already-national">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="already-national">
-                Already registered on a national level
-              </label>
-              <span id="hint-already-national" class="govuk-hint govuk-radios__hint">The employer cannot register because they are already registered at a national level.</span>
-            </div>
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="not-UK" name="status" type="radio" value="not-UK" aria-describedby="hint-not-UK">
-              <label class="govuk-label govuk-radios__label govuk-label--s" for="not-UK">
+              <input class="govuk-radios__input" id="rejection-reason-2" name="rejection-reason" type="radio" value="not UK" aria-describedby="rejection-reason-2">
+              <label class="govuk-label govuk-radios__label govuk-label--s" for="rejection-reason-2">
                 Not based in the United Kingdom
               </label>
-              <span id="hint-not-UK" class="govuk-hint govuk-radios__hint">The employer cannot register because the scheme is only open to employers based in the United Kingdom.</span>
+              <span id="rejection-reason-2" class="govuk-hint govuk-radios__hint">They cannot register because the scheme is only open to companies based in the United Kingdom.</span>
             </div>
 
           </div>
-
 
         </fieldset>
 
       </div>
 
-      <button class="govuk-button">Continue</button>
+      <button class="govuk-button" data-module="govuk-button">Reject company and send confirmation email</button>
 
     </form>
 

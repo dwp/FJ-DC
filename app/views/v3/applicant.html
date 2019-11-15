@@ -31,12 +31,11 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="govuk-inset-text govuk-inset-text--blue">
-      <p>Check that this is not a duplicate of a current registration before you approve the company.</p>
-    </div>
-  </div>
+<div class="govuk-inset-text govuk-inset-text--blue">
+  <p>Check that this is not a duplicate of a current registration before you approve the company.</p>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-4">
 
   <div class="govuk-grid-column-two-thirds-from-desktop">
 
@@ -138,7 +137,7 @@
       </div>
     </dl>
 
-    <h2 class="govuk-heading-m">Disability Confident level</h2>
+    <h2 class="govuk-heading-m">Disability Confident details</h2>
 
     <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
@@ -154,10 +153,6 @@
           </a>
         </dd>
       </div>
-    </dl>
-
-    <h2 class="govuk-heading-m">Disability Confident commitments</h2>   
-    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Level 1 commitments
@@ -180,9 +175,10 @@
 
       <h2 class="govuk-heading-m">Case actions</h2>
       <a href="/v3/if-new" class="govuk-button">Approve registration</a>
+      <p><a href="/v3/status-reason-for-rejection">Reject employer</a></p>
       <p><a href="/v3/delete-employer">Delete employer</a></p>
       
-      
+      <h2 class="govuk-heading-m">Case history</h2>
       <ol class="dwp-timeline">
         <!-- <li class="dwp-timeline__entry">
           <h3 class="dwp-timeline__title">Registration approved</h3>
