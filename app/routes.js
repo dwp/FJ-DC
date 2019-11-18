@@ -116,7 +116,7 @@ router.post('/v3/status-accepted', function (req, res) {
 
 // v3 Notify rejected email
 
-router.post('/v2/status-rejected', function (req, res) {
+router.post('/v3/status-rejected', function (req, res) {
     let status = req.session.data['status']
     
     if (status === 'not-UK') {
