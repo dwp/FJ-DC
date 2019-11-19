@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block keyDetails %}
-  {% include "v3/_key-details.html" %}
+  {% include "v3/_key-details-approved.html" %}
 {% endblock %}
 
 {% block beforeContent %}
@@ -35,13 +35,13 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">
-        Employer registration rejected
-      </h1>
-
-      <p>The employer has been emailed the reason why.</p>
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-bottom-6">
+        <h1 class="govuk-panel__title">Information sent</h1>
+        <div class="govuk-panel__body">The company has been emailed their guidance, badge and certificate</div>
+      </div>
 
       <p><a href="/v3/search">Find a new company registration</a>.</p>
+
 
   </div>
 
