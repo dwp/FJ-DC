@@ -23,6 +23,10 @@
     html: 'Messages are not real and no data is saved.'
   }) }} #}
 
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+
 {% endblock %}
 
 {% block content %}
@@ -195,6 +199,9 @@
       <p><a href="/v3/delete-approved-employer">Delete employer</a></p>
 
       <h2 class="govuk-heading-m">Case history</h2>
+{#       <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add a note
+      </button>  #}     
       <ol class="dwp-timeline">
         <li class="dwp-timeline__entry">
           <h3 class="dwp-timeline__title">Registration approved</h3>
@@ -203,7 +210,6 @@
             <span class="dwp-timeline__date">16 October 2019 at 1:30pm</span>
           </p>
         </li>
-
         <li class="dwp-timeline__entry">
           <h3 class="dwp-timeline__title">Registration received</h3>
           <p class="dwp-timeline__info">
