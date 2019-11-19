@@ -93,6 +93,28 @@ router.post('/v3/jobcentre-relationship', function (req, res) {
   }
 })
 
+// v3 - Commitments for different Disability Confident levels
+
+router.post('/v3/dc-commitments-level-1', function (req, res) {
+
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+
+  let dcLevel = req.session.data['dc-level']
+
+  if (dcLevel === 'Employer') {
+    res.redirect('/v3/dc-commitments-level-2')
+  }
+  if (dcLevel === 'Leader') {
+    res.redirect('/v3/dc-commitments-level-3')
+  } 
+  else {
+    res.redirect('/v3/dc-commitments-level-1')
+  }
+})
+
+
 // v3 Notify accepted email
 
 router.post('/v3/status-accepted', function (req, res) {
