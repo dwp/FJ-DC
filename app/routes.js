@@ -115,7 +115,7 @@ router.post('/v3/dc-commitments-level-1', function (req, res) {
 })
 
 
-// v3 Notify accepted email
+// v3 Notify - send accepted email once user goes to accepted page
 
 router.post('/v3/status-accepted', function (req, res) {
   let status = req.session.data['public-sector-type']
