@@ -1,0 +1,294 @@
+{% extends "layout-staff.html" %}
+
+{% block pageTitle %}
+  {% include "v3/_service-name.html" %}
+{% endblock %}
+
+{% block serviceName %}
+  {% include "v3/_service-name.html" %}
+{% endblock %}
+
+{% block keyDetails %}
+  {% include "v3/_key-details-expired.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages are not real and no data is saved.'
+  }) }} #}
+
+  <div class="govuk-!-margin-bottom-5">
+    <a href="javascript:history.back()" rel="prev" class="govuk-back-link">Back</a>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-inset-text govuk-inset-text--blue">
+  <p>This expired record will be automatically deleted on 20 February 2020, unless the registration is renewed.</p>
+</div>
+
+<div class="govuk-grid-row govuk-!-margin-top-4">
+
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-l">Registration details</h1>
+
+    <h2 class="govuk-heading-m">Company details</h2>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Vera Duckworth
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> contact name</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          vera@internet.com
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> email address</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Phone number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          04567 890 123
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> phone number</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Coronation Street, Weatherfield, M17 9YY
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> address</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Area of operation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          North West
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> area of operation</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of employees
+        </dt>
+        <dd class="govuk-summary-list__value">
+          11
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> number of employees</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Industry sector
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Retail and sales
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> industry sector</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Public sector type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          None
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> public sector type</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Jobcentre district
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Greater Manchester
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> jobcentre district</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Jobcentre group
+        </dt>
+        <dd class="govuk-summary-list__value">
+          North West
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/company-details">
+            Change<span class="govuk-visually-hidden"> jobcentre group</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+
+    <h2 class="govuk-heading-m">Disability Confident details</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Level
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Committed: level 2
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/dc-level">
+            Change<span class="govuk-visually-hidden"> level signed up to</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Activities
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Identifying and sharing good practices<br>Mentoring, coaching, buddying and other support networks for staff<br>Occupational health services
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="/v3/dc-commitments-level-1">
+            Change<span class="govuk-visually-hidden"> activities</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Badge sent
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12 October 2018
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> start date</span>
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Badge expiry
+        </dt>
+        <dd class="govuk-summary-list__value">
+          12 October 2019
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">
+            Change<span class="govuk-visually-hidden"> expiry date</span>
+          </a>
+        </dd>
+      </div>
+    </dl>
+  
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items status-verified" role="complementary">
+
+      <h2 class="govuk-heading-m">Case actions</h2>
+      <a href="/v3/pack-re-sent" class="govuk-button">Renew registration</a>
+{#       <p><a href="/v3/delete-approved-employer">Delete employer</a></p> #}
+
+      <h2 class="govuk-heading-m">Case history</h2>
+{#       <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add a note
+      </button>  #}     
+      <ol class="dwp-timeline">
+        <li class="dwp-timeline__entry">
+          <h3 class="dwp-timeline__title">Registration expired</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-timeline__date">12 October 2019 at 12:00am</span>
+          </p>
+        </li>
+        <li class="dwp-timeline__entry">
+          <h3 class="dwp-timeline__title">Activities updated</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-timeline__author">by Jane Doe</span>
+            <span class="dwp-timeline__date">20 October 2019 at 3:00pm</span>
+          </p>
+          <p class="dwp-timeline__info">Added occupational health services.</p>
+          </p>
+        </li>
+        <li class="dwp-timeline__entry">
+          <h3 class="dwp-timeline__title">Level updated</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-timeline__author">by Jane Doe</span>
+            <span class="dwp-timeline__date">12 Octover 2018 at 3:00pm</span>
+          </p>
+          <p class="dwp-timeline__info">Change to level 2.</p>
+          </p>
+        </li>
+        <li class="dwp-timeline__entry">
+          <h3 class="dwp-timeline__title">Registration approved</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-timeline__author">by John Smith</span>
+            <span class="dwp-timeline__date">12 July 2018 at 1:30pm</span>
+          </p>
+        </li>
+        <li class="dwp-timeline__entry">
+          <h3 class="dwp-timeline__title">Registration received</h3>
+          <p class="dwp-timeline__info">
+            <span class="dwp-timeline__date">	15 October 2019 at 10:30am</span>
+          </p>
+        </li>
+      </ol>
+
+
+    </aside>
+  </div>
+
+</div>
+
+{% endblock %}
