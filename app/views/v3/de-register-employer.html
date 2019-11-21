@@ -34,16 +34,76 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Are you sure you want to de-register Sunshine Desserts?</h1>
+    <form action="/v3/status-de-registered" method="post" class="form">
 
-    <p>The company will be removed from the Disability Confident scheme. You'll need to contact them to tell them to stop using their badge.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="rejection-reason-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Confirm why you're de-registering the company
+            </h1>
+          </legend>
+      {#     <span id="rejection-reason-conditional-hint" class="govuk-hint">
+            Select one option.
+          </span> #}
 
-    <a class="govuk-button" href="/v3/search">Yes, de-register them</a>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
-    <p><a href="/v3/applicant-approved" class="govuk-link">Cancel</a></p>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rejection-reason-conditional-3" name="rejection-reason" type="radio" value="email" data-aria-controls="conditional-rejection-reason-conditional-3">
+              <label class="govuk-label govuk-radios__label" for="rejection-reason-conditional-3">
+                Does not wish to be part of the scheme anymore
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rejection-reason-conditional-1" name="rejection-reason" type="radio" value="email" data-aria-controls="conditional-rejection-reason-conditional-1">
+              <label class="govuk-label govuk-radios__label" for="rejection-reason-conditional-1">
+                Merged with another company
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rejection-reason-conditional-2" name="rejection-reason" type="radio" value="email" data-aria-controls="conditional-rejection-reason-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="rejection-reason-conditional-2">
+                Not trading anymore
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rejection-reason-conditional-4" name="rejection-reason" type="radio" value="phone" data-aria-controls="conditional-rejection-reason-conditional-4">
+              <label class="govuk-label govuk-radios__label" for="rejection-reason-conditional-4">
+                Registered in error
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rejection-reason-conditional-5" name="rejection-reason" type="radio" value="text" data-aria-controls="conditional-rejection-reason-conditional-5">
+              <label class="govuk-label govuk-radios__label" for="rejection-reason-conditional-5">
+                Other reason
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-rejection-reason-conditional-5">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="contact-by-text">
+                  Say why
+                </label>
+                <textarea class="govuk-textarea" id="contact-by-text" name="contact-by-text" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">De-register company</button>
+
+      <p><a href="/v3/applicant-approved" class="govuk-link">Cancel</a></p>
+
+    </form>
 
   </div>
+
 
 </div>
 
 {% endblock %}
+
+
+
+
